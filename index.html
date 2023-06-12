@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <title>Foster</title>
   <link rel="icon" href="favicon.ico"><link href="style.css" rel="stylesheet"></head>
   <body
@@ -314,11 +316,12 @@
                 </ul>
                   <!-- Button -->
                   <a
-                  href="#"
+                  href="#support"
                   class="ek rg lk ml il gi ri"
                   :class="plan.name == 'Growth Plan' ? 'gh sl' : 'mh tl'"
+                  :id="plan.id"
                   >
-                  Try for free
+                  Quote This
                   </a>
               </div>
             </template>
@@ -904,47 +907,47 @@
           plans: [
             {
               name: 'Website Development',
-              
+              id:'webquery',
               features: ['Transform your vision and business into a compelling online presence with interactive, feature-filled, and highly compatible web applications are developed based on your requirements by our team of techies.'],
             },
             {
               name: 'Mobile App Development',
-              
+              id:'appquery',
               features: ['Your business can be left behind without a mobile app. With our team of mobile application developement, power your business with impactful mobile apps that deliver seamless experiences, drive engagement, and unlock new opportunities for growth.'],
             },
             {
               name: 'Custom Software Development',
-              
+              id:'customsoftwarequery',
               features: ['Tailored to your needs and industry, get a custom software development by team of techies with high caliber and experience, developing cutting-edge technology to deliver scalable, efficient, and innovative software solutions.'],
             },
             {
               name: 'AR & VR Development',
-              
+              id:'arvrquery',
               features: ['Step into the future of business with our Augmented Reality and Virtual Reality development expertise. Our cutting-edge solutions redefine engagement, training, and visualization. All of these allows us to bring imagination to life, and unlocking new possibilities for your brand\'s growth & innovation.'],
             },
             {
               name: 'Data Analytics & AI',
-              
+              id:'dataquery',
               features: ['The challenge is not getting the data but knowing what to do with it. Our solutions make data actionable and leverageable. Unlock the power of data-driven insights and gain a competitive edge with our advanced data analytics and AI solutions, driving intelligent decision-making and fueling business innovation.'],
             },
             {
               name: 'Digital Marketing',
-              
+              id:'dmquery',
               features: ['Accelerate your business growth, maximize your online presence and make your business visible online with our results-driven digital marketing solutions, customized to boost brand visibility, drive targeted traffic, achieve measurable success and hyper-targeted brand awareness optimization.'],
             },
             {
               name: 'UI & UX Designing',
-              
+              id:'uiuxquery',
               features: ['Crafting seamless digital experiences that captivate users and drive business success, our UI/UX design services blend aesthetics, functionality, and user-centric design principles.'],
             },
             {
               name: 'Graphic Designing',
-              
+              id:'graphicquery',
               features: ['Elevate your brand\'s visual identity and make a lasting impression with our expert graphic design services, tailored to enhance your business\'s professionalism and creativity.']
             },
             {
               name: 'Videos & Animation Services',
-              
+              id:'videoquery',
               features: ['Unlock the power of captivating visuals with our professional video and animation services, tailored to elevate your business\'s storytelling and engage your audience like never before.'],
             },
 
@@ -952,5 +955,55 @@
         };
       };
     </script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $("#webquery").click(function(){
+        var value = 'Website Development Query: ';
+        var input = $('#message');
+        input.val(value);
+    });
+    $("#appquery").click(function(){
+        var value = 'App Development Query: ';
+        var input = $('#message');
+        input.val(value);
+    });
+    $("#customsoftwarequery").click(function(){
+        var value = 'Custom Software Query: ';
+        var input = $('#message');
+        input.val(value);
+    });
+    $("#arvrquery").click(function(){
+        var value = 'AR VR Development Query: ';
+        var input = $('#message');
+        input.val(value);
+    });
+    $("#dmquery").click(function(){
+        var value = 'Digital Marketing Query: ';
+        var input = $('#message');
+        input.val(value);
+    });
+    $("#uiuxquery").click(function(){
+        var value = 'UI and UX Query: ';
+        var input = $('#message');
+        input.val(value);
+    });
+    $("#graphicquery").click(function(){
+        var value = 'Graphic Designing Query: ';
+        var input = $('#message');
+        input.val(value);
+    });
+    $("#videoquery").click(function(){
+        var value = 'Videos and Animations Query: ';
+        var input = $('#message');
+        input.val(value);
+    });
+    $("#dataquery").click(function(){
+        var value = 'Data Analytics and AI Query: ';
+        var input = $('#message');
+        input.val(value);
+    });
+});
+</script>
   <script defer src="bundle.js"></script></body>
 </html>
